@@ -12,7 +12,7 @@
 function search_and_dropbox_plugin_enqueue_scripts() {
 	wp_enqueue_style('fontawesome','https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
     wp_enqueue_script('search-and-dropbox-plugin-scripts', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js', array('jquery'), '1.0', true);
-    wp_enqueue_script( 'search-and-dropbox-custom-script', plugin_dir_url( __FILE__ ) . 'js/custom.js', array( 'jquery' ), '1.0', true );
+    wp_enqueue_script( 'search-and-dropbox-custom-script', plugin_dir_url( __FILE__ ) . 'custom.js', array( 'jquery' ), '1.0', true );
     wp_enqueue_style('search-and-dropbox-plugin-styles', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css');
     wp_enqueue_style('custom-plugin-styles', plugin_dir_url(__FILE__) . 'styles.css');
 
