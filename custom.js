@@ -39,8 +39,13 @@ jQuery(document).ready(function($) {
             processData: false,
          data : formData,
          success: function(response) {
-             var res = JSON.parse(response);
-             $('#exportProduct').prop('disabled', false);
+            var res = JSON.parse(response);
+            $('#exportProduct').prop('disabled', false);
+            if(!res.success){
+                $("#upload-status").css('color','red');
+            }else{
+                $("#upload-status").css('color','blue');
+            }
            $("#upload-status").text(res.message);
            $("#exportProduct").html('Export Order');
          }
